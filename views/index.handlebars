@@ -1,0 +1,64 @@
+<form method="POST" class="select-person mx-auto col-11 row container ">
+  <div class="left">
+    <div class="check-container row">
+      <div class="form-check col-12">
+        <img class="image" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          alt="">
+        <div class="input-group row">
+
+          <label class="form-check-label col-5" for="engineer">
+            工程師
+          </label>
+          <div>
+            <input class="form-check-input col-2" type="radio" name="person" id="engineer" value="engineer"
+              {{checked 'engineer' currentValue}}>
+          </div>
+        </div>
+      </div>
+      <div class="form-check col-12">
+        <img class="image" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          alt="">
+        <div class="input-group row">
+
+          <label class="form-check-label col-5" for="designer">
+            設計師
+          </label>
+          <div>
+            <input class="form-check-input col-2" type="radio" name="person" id="designer" value="designer"
+              {{checked 'designer' currentValue}}>
+          </div>
+        </div>
+
+      </div>
+      <div class="form-check col-12">
+        <img class="image" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          alt="">
+        <div class="input-group row">
+          <label class="form-check-label col-5" for="entrepreneur">
+            創業家
+          </label>
+          <div>
+            <input class="form-check-input col-2" type="radio" name="person" id="entrepreneur" value="entrepreneur"
+              {{checked 'entrepreneur' currentValue}}>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="text-container">
+      <div class="text">
+      </div>
+    </div>
+    <div class="generate-text-btn">
+      <div class='textBox'>
+        {{#if talk}}
+        <div>{{talk}}</div>
+        {{/if}}
+      </div>
+      <button type='submit' class="generate-btn btn btn-primary">講幹話</button>
+
+    </div>
+  </div>
+</form>
